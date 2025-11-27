@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fun Games</title>
+        <script src="./Ruffle/ruffle.js"></script>
+    </head>
+    <body>
+        <h1>Cooking gaems</h1>
+        <div id="gamePlayer">
+
+        </div>
+
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("gamePlayer");
+            container.appendChild(player);
+            player.ruffle().load("./Games/papascheeseria.swf");
+
+            // Mods
+            player.style.width = "600px"; player.style.height = "400px";
+
+            player.ruffle().config = {
+                "splashScreen": false,
+            }
+        });
+    </script>
+    </body>
+</html>
