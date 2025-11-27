@@ -29,6 +29,7 @@
             "splashScreen": false,
             "contextMenu": "off",
             "autoplay": "on",
+            "unmuteOverlay": "off",
         }
 
         window.addEventListener("load", (event) => {
@@ -39,9 +40,10 @@
             player.ruffle().load("./Games/papascheeseria.swf");
 
             // Mods
-            player.style.width = "1080px"; player.style.height = "720px";
+            player.style.width = "1080px"; 
+            player.style.height = "720px";
 
-        
+            
         });
     </script>
     </body>
